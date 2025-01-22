@@ -43,3 +43,4 @@ C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\r
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.pdb
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ref\ToDoListApi.dll
+C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.sourcelink.json
