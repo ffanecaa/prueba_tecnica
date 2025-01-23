@@ -29,6 +29,7 @@ C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\T
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.csproj.CoreCompileInputs.cache
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.sourcelink.json
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\staticwebassets\msbuild.ToDoListApi.Microsoft.AspNetCore.StaticWebAssets.props
@@ -43,4 +44,3 @@ C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\r
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.pdb
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.genruntimeconfig.cache
 C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ref\ToDoListApi.dll
-C:\Users\marti\OneDrive\Escritorio\prueba_tecnica\TodoListApi\obj\Debug\net8.0\ToDoListApi.sourcelink.json

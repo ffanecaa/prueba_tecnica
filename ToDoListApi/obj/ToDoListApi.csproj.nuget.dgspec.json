@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\TodoListApi\\ToDoListApi.csproj": {}
+    "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\ToDoListApi\\ToDoListApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\TodoListApi\\ToDoListApi.csproj": {
+    "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\ToDoListApi\\ToDoListApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\TodoListApi\\ToDoListApi.csproj",
+        "projectUniqueName": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\ToDoListApi\\ToDoListApi.csproj",
         "projectName": "ToDoListApi",
-        "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\TodoListApi\\ToDoListApi.csproj",
+        "projectPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\ToDoListApi\\ToDoListApi.csproj",
         "packagesPath": "C:\\Users\\marti\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\TodoListApi\\obj\\",
+        "outputPath": "C:\\Users\\marti\\OneDrive\\Escritorio\\prueba_tecnica\\ToDoListApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marti\\AppData\\Roaming\\NuGet\\NuGet.Config"

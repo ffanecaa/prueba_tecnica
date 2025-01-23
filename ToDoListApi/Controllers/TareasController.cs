@@ -24,6 +24,23 @@ namespace ToDoListApi.Controllers
             return Ok(tareas);
         }
 
+          // GET: api/tareas{id}
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetTareaById(int id)
+        {
+
+            var tarea = await _context.Tarea.FindAsync(id);
+
+
+            if (tarea == null)
+            {
+                return NotFound($"No se encontró la tarea con el ID {id}.");
+            }
+            return Ok(tarea);
+        }
+
+
+
         // POST: api/tareas
         [HttpPost]
         public async Task<IActionResult> CreateTarea([FromBody] Tarea nuevaTarea)
