@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Tarea } from "../hooks/UseTareas";
 
 interface ButtonActualizarProps {
@@ -6,7 +6,10 @@ interface ButtonActualizarProps {
   onUpdateTarea: (id: number, updatedTarea: Tarea) => void;
 }
 
-const ButtonActualizar: React.FC<ButtonActualizarProps> = ({ tarea, onUpdateTarea }) => {
+const ButtonActualizar: React.FC<ButtonActualizarProps> = ({
+  tarea,
+  onUpdateTarea,
+}) => {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [isEditingDescription, setIsEditingDescription] = useState(false);
   const [title, setTitle] = useState(tarea.title);
@@ -22,27 +25,25 @@ const ButtonActualizar: React.FC<ButtonActualizarProps> = ({ tarea, onUpdateTare
   const handleDescriptionUpdate = () => {
     const updatedTarea = { ...tarea, description };
     onUpdateTarea(tarea.id, updatedTarea);
-    setIsEditingDescription(false); // Oculta el campo de edición después de actualizar
+    setIsEditingDescription(false); 
   };
 
   const handleCompletionChange = () => {
     const updatedTarea = { ...tarea, isCompleted: !isCompleted };
-    setIsCompleted(!isCompleted); // Cambia el estado local del checkbox
-    onUpdateTarea(tarea.id, updatedTarea); // Actualiza el estado global de la tarea
+    setIsCompleted(!isCompleted); 
+    onUpdateTarea(tarea.id, updatedTarea); 
   };
 
   return (
     <div>
+      {/* Checkbox para marcar como completada */}
 
-         {/* Checkbox para marcar como completada */}
-        
-      
-        <input
-          type="checkbox"
-          checked={isCompleted}
-          onChange={handleCompletionChange} // Cambia el estado de la tarea
-        />
-    
+      <input
+        type="checkbox"
+        checked={isCompleted}
+        onChange={handleCompletionChange}
+      />
+
       {/* Título editable */}
       {isEditingTitle ? (
         <input
@@ -55,7 +56,9 @@ const ButtonActualizar: React.FC<ButtonActualizarProps> = ({ tarea, onUpdateTare
           autoFocus
         />
       ) : (
-        <h2 onClick={() => setIsEditingTitle(true)}>{tarea.title}</h2> // Muestra campo de edición al hacer clic
+        <h2 className="title" onClick={() => setIsEditingTitle(true)}>
+          {tarea.title}
+        </h2>
       )}
 
       {/* Descripción editable */}
@@ -68,10 +71,10 @@ const ButtonActualizar: React.FC<ButtonActualizarProps> = ({ tarea, onUpdateTare
           autoFocus
         />
       ) : (
-        <p onClick={() => setIsEditingDescription(true)}>{tarea.description}</p> // Muestra campo de edición al hacer clic
+        <p className="text" onClick={() => setIsEditingDescription(true)}>
+          {tarea.description}
+        </p>
       )}
-
-   
     </div>
   );
 };

@@ -1,43 +1,56 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: black
+  font-family: "Open Sans", serif;
+  font-optical-sizing: auto;
+  color: black;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 
 
 
 body {
   margin: 0;
-  background: rgb(243,241,224);
+padding: 0;
   background: linear-gradient(90deg, rgba(243,241,224,1) 0%, rgba(238,241,243,1) 48%, rgba(241,218,233,0.822829131652661) 93%);
+  width: 100%;
+   min-height: 100vh;
 }
 
 
 
 
-.container{
+.container_app{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
-  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
  
 }
-
+/* Estilo componente Button actualizar */
 .btn_eliminar{
+  position: absolute;
+ bottom:10px;
+  right: 10px;
   padding: 8px;
   width: 10%;
-  background-color: #f12241d1;
+  background-color: #5e5758d1;
   text-align: center;
   border-radius: 10px;
   color: whitesmoke;
+  cursor: pointer;
 }
 
-
+/* Estilo componente Button actualizar */
+input[type="checkbox"]{
+  width: 80px;
+  height: 20px;
+  cursor: pointer;
+}
 /* Estilo para la textarea */
 textarea , .textarea {
    
@@ -69,8 +82,19 @@ textarea:focus , .textarea:focus {
   box-shadow: none; /* Elimina las sombras al hacer foco */
 }
 
+.title{
+  font-size: 1rem;
+  font-weight: semibold;
+
+}
+
+.text{
+  font-size: 0.8rem;
+  font-weight: regular;
+}
 
 
+/* Estilo para el contenedor de la cabecera */
 .container_header{
   display: flex;
   justify-content:center;
@@ -87,3 +111,7 @@ textarea:focus , .textarea:focus {
   font-weight: bold;
   font-size: 2rem;
 }
+
+
+
+

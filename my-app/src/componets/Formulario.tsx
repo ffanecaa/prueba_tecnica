@@ -35,7 +35,7 @@ const Formulario = () => {
 
   return (
     <div className="container_form">
-      <h2>Nueva Tarea</h2>
+      <h2>Nueva Tarea </h2>
       <form onSubmit={handleSubmit}>
         <div>
           <input

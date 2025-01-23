@@ -22,12 +22,12 @@ const TareasList = () => {
         <Formulario />
         {tareas.map((tarea) => (
           <article className='article_list' key={tarea.id}>
-            <div className="container_title">
+            
             
               <ButtonActualizar tarea={tarea} onUpdateTarea={handleUpdateTarea} />
-            </div>
+         
            
-            <ButtonEliminar onClick={() => deleteTarea(tarea.id)} />
+            <ButtonEliminar  onClick={() => deleteTarea(tarea.id)} />
           </article>
         ))}
       </section>

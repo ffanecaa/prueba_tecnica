@@ -6,7 +6,7 @@ interface ButtonEliminarProps {
 const ButtonEliminar :React.FC<ButtonEliminarProps> = ({ onClick }) => {
   return (
     <div className="btn_eliminar" onClick={onClick}>
-      <RiDeleteBin2Line/>
+      <RiDeleteBin2Line className="icon_bean"/>
     </div>
   )
 }
