@@ -4,65 +4,86 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  color: black
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
+
 
 body {
   margin: 0;
+  background: rgb(243,241,224);
+  background: linear-gradient(90deg, rgba(243,241,224,1) 0%, rgba(238,241,243,1) 48%, rgba(241,218,233,0.822829131652661) 93%);
+}
+
+
+
+
+.container{
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
   min-height: 100vh;
+ 
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.btn_eliminar{
+  padding: 8px;
+  width: 10%;
+  background-color: #f12241d1;
+  text-align: center;
+  border-radius: 10px;
+  color: whitesmoke;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+
+/* Estilo para la textarea */
+textarea , .textarea {
+   
+  background: transparent; 
+  border: none;
+  font-family: inherit; /* Hereda la fuente del contenedor */
+  font-size: 1rem; /* Tamaño de fuente */
+  line-height: 1.5; /* Altura de línea */
+  outline: none; 
+  padding: 0; 
+  box-shadow: none; /* Elimina las sombras */
+  cursor: text;
+ 
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+textarea{
+  resize: none; /* Deshabilita el redimensionamiento */
+  min-height: 100px; /* Altura mínima */
+  max-height: 280px; 
+  min-width: 200px;
+  width: 100%; /* Se ajusta al 100% del contenedor */
+  form-sizing: content;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+textarea:focus , .textarea:focus {
+  background-color: transparent; /* Mantiene el fondo transparente al hacer foco */
+  border: none; /* Mantiene el borde eliminado */
+  outline: none; /* Elimina el borde de enfoque */
+  box-shadow: none; /* Elimina las sombras al hacer foco */
+}
+
+
+
+.container_header{
+  display: flex;
+  justify-content:center;
+  align-items: start;
+  width: 100%;
+  min-height: 150px;
+  padding: 10px;
+  background-color: #C1B9B6;
+  background-image: url("/images/header.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: rgb(83, 83, 83);
+  font-weight: bold;
+  font-size: 2rem;
 }

@@ -1,30 +1,36 @@
 import  { useEffect } from 'react';
 import { useTareas } from '../hooks/UseTareas';
+import ButtonActualizar from './ButtonActualizar';
+import ButtonEliminar from './ButtonEliminar';
+import '../styles/tareaList.css';
+import Formulario from './Formulario';
+
 const TareasList = () => {
-  const { tareas, fetchTareas, createTarea, updateTarea, deleteTarea } = useTareas();
+  const { tareas, fetchTareas, updateTarea, deleteTarea } = useTareas();
 
   useEffect(() => {
-    fetchTareas(); 
-  }, []);
+    fetchTareas();
+  }, [fetchTareas]);
+
+  const handleUpdateTarea = async (id: number, updatedTarea: any) => {
+    await updateTarea(id, updatedTarea);
+  };
 
   return (
-    <div>
-      <h1>Lista de Tareas</h1>
-      <ul>
+    <div className='container_list'>
+      <section className='section_list'>
+        <Formulario />
         {tareas.map((tarea) => (
-          <li key={tarea.id}>
-            <h2>{tarea.title}</h2>
-            <p>{tarea.description}</p>
-            <button onClick={() => updateTarea(tarea.id, { ...tarea, isCompleted: !tarea.isCompleted })}>
-              {tarea.isCompleted ? 'Marcar como pendiente' : 'Marcar como completada'}
-            </button>
-            <button onClick={() => deleteTarea(tarea.id)}>Eliminar</button>
-          </li>
+          <article className='article_list' key={tarea.id}>
+            <div className="container_title">
+            
+              <ButtonActualizar tarea={tarea} onUpdateTarea={handleUpdateTarea} />
+            </div>
+           
+            <ButtonEliminar onClick={() => deleteTarea(tarea.id)} />
+          </article>
         ))}
-      </ul>
-      <button onClick={() => createTarea({  title: 'Nueva Tarea', description: 'Descripción', isCompleted: false })}>
-        Crear tarea
-      </button>
+      </section>
     </div>
   );
 };
