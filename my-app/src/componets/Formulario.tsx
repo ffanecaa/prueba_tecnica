@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTareas, Tarea } from "../hooks/UseTareas";
-import "../styles/formulario.css";
+
 
 const Formulario = () => {
   const { createTarea } = useTareas();
@@ -51,6 +51,7 @@ const Formulario = () => {
           <input
             placeholder="Descripción"
             type="text"
+            minLength={10}
             id="description"
             value={description}
             onChange={handleDescriptionChange}

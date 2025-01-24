@@ -12,21 +12,38 @@ const ButtonActualizar: React.FC<ButtonActualizarProps> = ({
 }) => {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [isEditingDescription, setIsEditingDescription] = useState(false);
+  const [error, setError] = useState<string>("");
   const [title, setTitle] = useState(tarea.title);
   const [description, setDescription] = useState(tarea.description);
   const [isCompleted, setIsCompleted] = useState(tarea.isCompleted);
 
+
+
+
+  //manejador titulo
   const handleTitleUpdate = () => {
     const updatedTarea = { ...tarea, title };
     onUpdateTarea(tarea.id, updatedTarea);
     setIsEditingTitle(false);
   };
 
+
+  //manejador descripcion 
   const handleDescriptionUpdate = () => {
-    const updatedTarea = { ...tarea, description };
-    onUpdateTarea(tarea.id, updatedTarea);
-    setIsEditingDescription(false); 
-  };
+ 
+  if (description.length < 10) {
+    setError("La descripción debe tener al menos 10 caracteres. los cambios no se guardarán");
+    return;
+  }
+
+  setError(""); 
+  const updatedTarea = { ...tarea, description };
+  onUpdateTarea(tarea.id, updatedTarea);
+  setIsEditingDescription(false);
+};
+
+   
+  // manejador checkbox
 
   const handleCompletionChange = () => {
     const updatedTarea = { ...tarea, isCompleted: !isCompleted };
@@ -63,17 +80,21 @@ const ButtonActualizar: React.FC<ButtonActualizarProps> = ({
 
       {/* Descripción editable */}
       {isEditingDescription ? (
-        <textarea
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-          onBlur={handleDescriptionUpdate} // Guarda cambios al perder foco
-          onKeyDown={(e) => e.key === "Enter" && handleDescriptionUpdate()} // Guarda cambios al presionar Enter
-          autoFocus
-        />
+        <>
+          <textarea
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+            onBlur={handleDescriptionUpdate} // Guarda cambios al perder foco
+            onKeyDown={(e) => e.key === "Enter" && handleDescriptionUpdate()} // Guarda cambios al presionar Enter
+            autoFocus
+          />
+          {error && <p style={{ color: "red" }}>{error}</p>}
+        </>
       ) : (
         <p className="text" onClick={() => setIsEditingDescription(true)}>
           {tarea.description}
         </p>
+        
       )}
     </div>
   );
